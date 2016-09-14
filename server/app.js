@@ -31,7 +31,6 @@ app.get( '/getKoalas', function( req, res ){
 }
 else {
   console.log('connected to db');
-}
 
   var resultsArray = [];
   var queryResults = client.query('Select * FROM koalaInfo');
@@ -41,12 +40,9 @@ else {
   });
     queryResults.on('end', function(){
       done();
+      return res.json(resultsArray);
   });
-  var objectToSend={
-    response: 'from getKoalas route'
-  }; //end objectToSend
-  //send info back to client
-  res.send( objectToSend );
+}
 });
 });
 // add koala
@@ -60,6 +56,7 @@ app.post( '/addKoala', urlencodedParser, function( req, res ){
     transfer: req.body.transfer,
     notes: req.body.notes
   }; //end objectToSend
+
   //send info back to client
   res.send( objectToSend );
 });

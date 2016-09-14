@@ -12,11 +12,11 @@ $( document ).ready( function(){
     // NOT WORKING YET :(
     // using a test object
     var objectToSend = {
-      name: $('#namIn').val(),
+      name: $('#nameIn').val(),
       age: $('#ageIn').val(),
-      sex: $('sexIn').val(),
-      readyForTransfer: $('readyForTransferIn').val(),
-      notes: $('notesIn').val(),
+      sex: $('#sexIn').val(),
+      readyForTransfer: $('#readyForTransferIn').val(),
+      notes: $('#notesIn').val(),
     };
     // call saveKoala with the new obejct
     saveKoala( objectToSend );
