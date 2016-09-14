@@ -1,0 +1,9 @@
+Database Name: koalas
+Table Name: koalaInfo
+Fields:
+id (int, primary key, auto-increment)
+nameKoala: (varchar32)
+sex: (varchar1)
+age: (int)
+transfer: (varchar1)
+notes: (varchar100)
